@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git-Sync Sample v2</title>
+    <meta name="description" content="Confirmation page for Git-Sync sample.">
+    <meta name="author" content="maystani">
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            max-width: 600px;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .datetime {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Git-Sync sample works!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="datetime" id="datetime"></div>
+</main>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        document.getElementById("datetime").textContent = now.toLocaleString();
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000); // update every second
+</script>
+</body>
+</html>
